@@ -25,12 +25,15 @@ _N/A_
 * Program replaces 1 with "Boop!"
   * Example Input: 1
   * Example Output: "Boop!"
-* Program replaces (non-zero) numbers divisible by three with "I'm sorry Dave. I'm afraid I can't do that."
+* Program replaces (non-zero) numbers divisible by three with "I'm sorry <userName>. I'm afraid I can't do that."
   * Example Input: 6
   * Example Output: "I'm sorry Dave..."
-* Program ignores non-numeric and/or blank inputs.
+* Program ignores non-numeric and/or blank inputs for input number field.
   * Example Input: "hiHAL9000"
-  * Example Output: "Dave, you've not provided an acceptable input"
+  * Example Output: ""
+* Program requests a user name if not provided.
+  * Example Input: ""
+  * Example Output: I need a name to execute my program.
 
 ## Support and contact details
 
