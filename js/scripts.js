@@ -46,7 +46,7 @@ function replacer (inputArray, userName) {
       inputArray.splice(x, 1, "Beep!")
     }
   }
-  return inputArray;
+  return (inputArray.join());
 }
 
 $(document).ready(function() {
@@ -62,6 +62,13 @@ $(document).ready(function() {
 
     $("#outputHAL").empty()
     $("#outputHAL").text(result);
+      $({count:0}).animate({count:result.length}, {
+      duration: 4000,
+      step: function() {
+    $("#outputHAL").text(result.substring(0, Math.round(this.count)));
+
+      }
+    });
 
   });
 });
