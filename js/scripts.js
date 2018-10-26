@@ -28,7 +28,7 @@ function replacer (inputArray) {
       inputArray.splice(x, 1, "Boop!")
     }
     else if (inputArray[x] % 3 === 0) {
-      inputArray.splice(x, 1, "I'm sorry")
+      inputArray.splice(x, 1, "I'm sorry Dave. I'm afraid I can't do that.")
     }
   }
   return inputArray;

@@ -24,6 +24,15 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 * Program replaces 0 with "Beep!"
   * Example Input: 0
   * Example Output: ["Beep"]
+* Program replaces 1 with "Boop!"
+  * Example Input: 1
+  * Example Output: "Boop!"
+* Program replaces (non-zero) numbers divisible by three with "I'm sorry Dave. I'm afraid I can't do that."
+  * Example Input: 6
+  * Example Output: "I'm sorry Dave..."
+* Program ignores non-numeric and/or blank inputs.
+  * Example Input: "hiHAL9000"
+  * Example Output: "Dave, you've not provided an acceptable input"
 
 
 _{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
