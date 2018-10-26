@@ -34,7 +34,10 @@ _Unable to get error message if user name field is provided, but input number is
 * Program requests a user name if not provided.
   * Example Input: ""
   * Example Output: I need a name to execute my program.
-
+* Program accepts negative and positive integers for number input. Both count "up" in positive direction.
+  * Example Input: -5
+  * Example Output: -5 ,-4 ,I'm sorry, Chris. I'm afraid I can't do that.,-2 ,Boop!,Beep!
+  
 ## Support and contact details
 
 _Feel free to send an e-mail to chris@christophercahill.co_
