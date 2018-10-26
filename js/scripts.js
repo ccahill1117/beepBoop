@@ -1,6 +1,9 @@
 function countUpper (inputNo) {
   var newArray = [];
-  if (inputNo > 0) {
+  if (inputNo > 4294967295) {
+    newArray.push("this number is too large for JavaScript to handle!")
+  }
+  else if (inputNo > 0) {
     for (var i = 0; i <= inputNo; i++) {
       if (i <= inputNo) {
         newArray.push(i+" ");
@@ -33,7 +36,6 @@ function replacer (inputArray) {
   }
   return inputArray;
 }
-
 
 $(document).ready(function() {
   $("#numberForm").submit(function(event) {
