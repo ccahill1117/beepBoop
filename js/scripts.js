@@ -18,7 +18,15 @@ function countUpper (inputNo) {
       }
     }
   }
-  return newArray;
+return newArray;
+}
+
+function isNumber (userInputNumber) {
+  if ((Number(userInputNumber)) == NaN) {
+    return ("");
+  }
+  else { return userInputNumber
+    }
 }
 
 function replacer (inputArray) {
@@ -44,10 +52,12 @@ $(document).ready(function() {
 
     var inputString = $("input#inputNumber").val();
     var inputNumber = parseInt(inputString);
+    var acceptableNumber = isNumber(inputNumber);
 
-    var initialArray = countUpper(inputNumber);
+    var initialArray = countUpper(acceptableNumber);
     var result = replacer(initialArray);
 
+    console.log(acceptableNumber);
     console.log(initialArray);
     console.log(result);
     $("#outputHAL").empty()
