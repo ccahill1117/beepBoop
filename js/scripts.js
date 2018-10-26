@@ -1,6 +1,6 @@
 function countUpper (inputNo) {
   var newArray = [];
-  if (inputNo === NaN) {
+  if (inputNo == NaN) {
     newArray.push("u must enter num")
   }
   else if (inputNo > 4294967295) {
@@ -20,7 +20,7 @@ function countUpper (inputNo) {
       }
     }
   }
-return newArray;
+  return newArray;
 }
 
 function replacer (inputNo, inputArray, userName) {
