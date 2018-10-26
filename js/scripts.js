@@ -29,11 +29,11 @@ function isNumber (userInputNumber) {
     }
 }
 
-function replacer (inputArray) {
+function replacer (inputArray, userName) {
   var newNewArray = [];
   for (var x = 0; x <= inputArray.length; x++) {
     if (inputArray[x] % 3 === 0 && inputArray[x] != 0) {
-      inputArray.splice(x, 1, "I'm sorry Dave. I'm afraid I can't do that.")
+      inputArray.splice(x, 1, "I'm sorry, " + userName + ". I'm afraid I can't do that.")
     }
     else if ((String(inputArray[x])).includes("1") === true) {
       inputArray.splice(x, 1, "Boop!")
@@ -49,13 +49,13 @@ $(document).ready(function() {
 
   $("#numberForm").submit(function(event) {
     event.preventDefault();
-
+    var userName = $("input#userName").val();
     var inputString = $("input#inputNumber").val();
     var inputNumber = parseInt(inputString);
     var acceptableNumber = isNumber(inputNumber);
 
     var initialArray = countUpper(acceptableNumber);
-    var result = replacer(initialArray);
+    var result = replacer(initialArray, userName);
 
     console.log(acceptableNumber);
     console.log(initialArray);
