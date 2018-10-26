@@ -1,6 +1,6 @@
 # _Beep/Boop - A HAL 9000 Imitation Webpage_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _Third Week Independent Project, 2018.10.26_
 
 #### By _**{List of contributors}**_
 
