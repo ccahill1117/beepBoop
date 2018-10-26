@@ -23,7 +23,7 @@ function countUpper (inputNo) {
 return newArray;
 }
 
-function replacer (inputArray, userName) {
+function replacer (inputNo, inputArray, userName) {
   for (var x = 0; x <= inputArray.length; x++) {
     if (userName === "") {
       return "Stranger, I need a name to execute my program. Have you got one? I need a number too, or my program won't execute."
@@ -38,7 +38,11 @@ function replacer (inputArray, userName) {
       inputArray.splice(x, 1, "Beep!")
     }
   }
-  return (inputArray.join());
+    if (inputNo < 0) {
+      return ((inputArray).reverse()).join();
+    }
+    else { return (inputArray.join());
+    }
 }
 
 $(document).ready(function() {
@@ -49,7 +53,8 @@ $(document).ready(function() {
 
     var inputNumber = parseInt(inputString);
     var initialArray = countUpper(inputNumber);
-    var result = replacer(initialArray, userName);
+    console.log(initialArray);
+    var result = replacer(inputNumber, initialArray, userName);
 
     $("#outputHAL").empty()
     $("#outputHAL").text(result);
