@@ -1,5 +1,21 @@
-
-
+function countUpper (inputNo) {
+  var newArray = [];
+  if (inputNo > 0) {
+    for (var i = 0; i <= inputNo; i++) {
+      if (i <= inputNo) {
+        newArray.push(i+" ");
+      }
+    }
+  }
+  else if (inputNo < 0) {
+    for (var i = 0; i >= inputNo; i--) {
+      if (i >= inputNo) {
+        newArray.push(i+" ");
+      }
+    }
+  }
+  return newArray;
+}
 
 
 $(document).ready(function() {
@@ -7,10 +23,14 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputString = $("input#inputNumber").val();
+    var inputNumber = parseInt(inputString);
 
-    console.log(inputString);
+    var initialArray = countUpper(inputNumber);
 
-    $("#outputHAL").text(inputString);
+    console.log(initialArray);
+
+    $("#outputHAL").empty()
+    $("#outputHAL").text(initialArray);
 
   });
 });
