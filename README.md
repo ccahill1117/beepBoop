@@ -15,7 +15,7 @@ _This is a webpage that provides a text input to a user. Based upon the user's n
 
 ## Known Bugs
 
-_N/A_
+_Unable to get error message if user name field is provided, but input number is not. Count function simply does not run if there is no number provided (which is good), but I was unable to generate an error message to alert the user._
 
 ## Specification
 
