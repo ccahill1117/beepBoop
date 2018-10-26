@@ -24,20 +24,21 @@ function countUpper (inputNo) {
 function replacer (inputArray) {
   var newNewArray = [];
   for (var x = 0; x <= inputArray.length; x++) {
-    if ((String(inputArray[x])).includes("0") === true) {
-      inputArray.splice(x, 1, "Beep!")
+    if (inputArray[x] % 3 === 0 && inputArray[x] != 0) {
+      inputArray.splice(x, 1, "I'm sorry Dave. I'm afraid I can't do that.")
     }
     else if ((String(inputArray[x])).includes("1") === true) {
       inputArray.splice(x, 1, "Boop!")
     }
-    else if (inputArray[x] % 3 === 0) {
-      inputArray.splice(x, 1, "I'm sorry Dave. I'm afraid I can't do that.")
+    else if ((String(inputArray[x])).includes("0") === true) {
+      inputArray.splice(x, 1, "Beep!")
     }
   }
   return inputArray;
 }
 
 $(document).ready(function() {
+
   $("#numberForm").submit(function(event) {
     event.preventDefault();
 
