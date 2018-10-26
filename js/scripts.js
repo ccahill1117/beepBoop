@@ -11,6 +11,7 @@ function countUpper (inputNo) {
     for (var i = 0; i >= inputNo; i--) {
       if (i >= inputNo) {
         newArray.push(i+" ");
+        newArray.reverse();
       }
     }
   }
@@ -21,7 +22,10 @@ function replacer (inputArray) {
   var newNewArray = [];
   for (var x = 0; x <= inputArray.length; x++) {
     if ((String(inputArray[x])).includes("0") === true) {
-      inputArray.splice(x, 1, "beep")
+      inputArray.splice(x, 1, "Beep!")
+    }
+    else if ((String(inputArray[x])).includes("1") === true) {
+      inputArray.splice(x, 1, "Boop!")
     }
     else if (inputArray[x] % 3 === 0) {
       inputArray.splice(x, 1, "I'm sorry")
