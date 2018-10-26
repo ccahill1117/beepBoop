@@ -20,10 +20,11 @@ function countUpper (inputNo) {
 function replacer (inputArray) {
   var newNewArray = [];
   for (var x = 0; x <= inputArray.length; x++) {
-    if (inputArray[x])
-
+    if ((String(inputArray[x])).includes("0") === true) {
+      inputArray.splice(x, 1, "beep")
+    }
     else if (inputArray[x] % 3 === 0) {
-      inputArray.splice(x, 1, "divis ny three")
+      inputArray.splice(x, 1, "I'm sorry")
     }
   }
   return inputArray;
