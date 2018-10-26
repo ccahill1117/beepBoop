@@ -2,6 +2,10 @@ body {
   background-color: grey;
 }
 
+p {
+  text-align: justify;
+}
+
 img#bgHAL {
   position: absolute;
   z-index: -1;
