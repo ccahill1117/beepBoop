@@ -17,6 +17,18 @@ function countUpper (inputNo) {
   return newArray;
 }
 
+function replacer (inputArray) {
+  var newNewArray = [];
+  for (var x = 0; x <= inputArray.length; x++) {
+    if (inputArray[x])
+
+    else if (inputArray[x] % 3 === 0) {
+      inputArray.splice(x, 1, "divis ny three")
+    }
+  }
+  return inputArray;
+}
+
 
 $(document).ready(function() {
   $("#numberForm").submit(function(event) {
@@ -26,11 +38,12 @@ $(document).ready(function() {
     var inputNumber = parseInt(inputString);
 
     var initialArray = countUpper(inputNumber);
+    var result = replacer(initialArray);
 
     console.log(initialArray);
-
+    console.log(result);
     $("#outputHAL").empty()
-    $("#outputHAL").text(initialArray);
+    $("#outputHAL").text(result);
 
   });
 });
