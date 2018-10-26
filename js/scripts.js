@@ -63,12 +63,10 @@ $(document).ready(function() {
     $("#outputHAL").empty()
     $("#outputHAL").text(result);
       $({count:0}).animate({count:result.length}, {
-      duration: 4000,
+      duration: 5000,
       step: function() {
-    $("#outputHAL").text(result.substring(0, Math.round(this.count)));
-
+        $("#outputHAL").text(result.substring(0, Math.round(this.count)));
       }
     });
-
   });
 });
